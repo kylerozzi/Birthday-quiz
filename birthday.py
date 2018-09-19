@@ -36,12 +36,12 @@ from calendar import month_name
 todaymonth = datetime.today().month
 
 todaydate = datetime.today().day
-month = month_name[todaymonth]
+monthtoday = month_name[todaymonth]
 
 name=input("Hello, What is your name? ")
 year=int(input("Hi, "+ name +" What year were you born on? "))
 month=input("And what month were you born in, "+ name + "? ")
-day=input("And the day? ")
+day=int(input("And the day? "))
 
 if month in ["December", "January", "February"]:
     season = "winter"
@@ -61,4 +61,10 @@ elif 1990 <= year <= 1999:
 elif year >= 2000:
     era = "two thousands"
     
+if month == "October" and day == 31:
+    print("You were born on Halloween!")
+elif month == monthtoday and day == todaydate:
+    print("Happy Birthday!")
+    
+print( name + ", you are a "+ season +" baby of the "+ era +".")
 
