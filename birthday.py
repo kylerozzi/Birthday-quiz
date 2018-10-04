@@ -44,13 +44,13 @@ month=input("And what month were you born in, "+ name + "? ")
 day=int(input("And the day? "))
 
 if month in ["December", "January", "February"]:
-    season = "winter"
+    season="winter"
 elif month in ["March", "April", "May"]:
-    season = "spring"
+    season="spring"
 elif month in ["June", "July", "August"]:
-    season = "summer"
-elif month in ["September," "October," "November,"]:
-    season = "fall"
+    season="summer"
+else:
+    season="fall"
 
 if year < 1980:
     era = "Stone Age"
